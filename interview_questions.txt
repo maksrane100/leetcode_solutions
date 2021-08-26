@@ -1,0 +1,8 @@
+1) How Set is implemented in Java?
+
+2) What classes you used from Java's Collection framework?
+
+3) Which Java design patterns you have used and where did you use them?
+
+4) What is difference between PATH and CLASSPATH ?
+
