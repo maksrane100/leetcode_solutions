@@ -1,0 +1,104 @@
+Top Interview Unix Commands (For Java Developers)
+Command
+
+chmod
+chmod is the command and system call used to change the access permissions of file system.
+ 
+4(r) + 2(w) + 1(x) 
+
+Each group has three permissions rwx stands for read, write and execute and they are written as user_group_others. 
+
+For example,754 would allow:
+    • "read" (4), "write" (2), and "execute" (1) for the User class i.e. 7 (4+2+1).
+    • "read" (4) and "execute" (1) for the Group class i.e. 5 (4+1).
+    • Only "read" (4) for the Others class.
+
+
+ls
+ls -ltr
+This combination will give size, long list and sort files from the time of creation/modify.
+
+grep
+grep is a command-line utility for searching plain-text data sets for lines that match a regular expression. 
+
+grep “^Processing” file1
+
+Match all lines that start with “Processing”
+
+kill
+Used to kill or terminate a process
+
+kill <PID>
+find
+ find is a command-line utility that locates files based on some user-specified criteria
+
+find ./tmp -name sample.txt 
+
+search for file named sample.txt under ./tmp directory
+ 
+pwd
+writes the full pathname of the current working directory to the standard output 
+mv
+mv is a Unix command that moves one or more files or directories from one place to another 
+rm
+rm is a basic command on Unix and Unix-like operating systems used to remove objects such as computer files, directories 
+rmdir
+rmdir is a command which will remove an empty directory 
+echo
+echo is a command that outputs the strings it is being passed as arguments 
+cat
+cat is a standard Unix utility that reads files sequentially, writing them to standard output 
+whoami
+prints the effective username of the current user 
+cron
+time-based job schedule 
+ping
+utility used to test the reachability of a host on an Internet 
+head
+Read first few lines from top of the file
+tail
+Read few lines from the end of the file
+
+
+    • How to find running “java” processes on unix:
+
+	ps -ef | grep java
+
+    • In a file word "Error" is appearing many times. How will you count number?
+      
+      grep -c "Error" filename
+
+
+
+    • How do you set environment variable which will be accessible form sub shell?
+      
+      By using export command,  for example export filelocation=/tmp/scripts will be available on all sub shell.
+      
+    • find which operating system your system is running on
+
+uname
+      
+    • How to find all text file which contains word Exception
+
+find. –name "*.txt" | grep "Exception"
+      
+    • How to check if a particular process is listening on a particular port on remote host?
+      
+telnet hostname port 
+
+
+    • How do you copy file from one host to other server
+
+using scp or sftp command
+      
+    • How do you find which process is consuming how much CPU?
+
+Using top command
+      
+    • How do you check how much space left in current drive
+
+using df
+      
+    • In VI editor, how can you go to the end of the file without using arrow keys:
+      
+      Shift+G
